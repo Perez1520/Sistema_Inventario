@@ -16,17 +16,30 @@ document.addEventListener('DOMContentLoaded', () => {
         productForm.reset();
     });
 
-    searchInput.addEventListener('input', () => {
-        const filter = searchInput.value.toLowerCase();
-        const rows = inventoryTable.getElementsByTagName('tr');
-        Array.from(rows).forEach(row => {
-            const productName = row.cells[0].textContent.toLowerCase();
-            if (productName.includes(filter)) {
-                row.style.display = '';
-            } else {
-                row.style.display = 'none';
+    searchInput.addEventListener('keypress', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            const filter = searchInput.value.toLowerCase();
+            const rows = inventoryTable.getElementsByTagName('tr');
+            let found = false;
+            Array.from(rows).forEach(row => {
+                const productName = row.cells[0].textContent.toLowerCase();
+                if (productName.includes(filter)) {
+                    row.style.display = '';
+                    found = true;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+            if (!found && filter !== '') {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Lo siento, este producto no existe",
+                    footer: '<a href="#">¿Por qué tengo este problema?</a>'
+                });
             }
-        });
+        }
     });
 
     async function addProductToTable(id, name, quantity) {
@@ -40,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
             </td>
         `;
         inventoryTable.appendChild(row);
-
         const saveButton = row.querySelector('.save-btn');
         saveButton.addEventListener('click', async () => {
             const input = row.querySelector('.quantity-input');
@@ -55,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-
         const deleteButton = row.querySelector('.delete-btn');
         deleteButton.addEventListener('click', async () => {
             Swal.fire({
