@@ -17,7 +17,7 @@ h2 {
     margin-bottom: 20px;
     border-radius: 10px; /* Bordes redondeados */
     overflow: hidden; /* Para que los bordes redondeados se apliquen a todo el contenido */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más grande */
 }
 
 .form-inline .form-control {
