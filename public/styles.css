@@ -1,12 +1,16 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
-    background-color: #f8f9fa; /* Fondo claro */
+    background-color: #fcfcf0; /* Fondo beige */
 }
 
 h1, h2 {
     color: #333;
     text-align: center; /* Centrar los títulos */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 h2 {
@@ -18,6 +22,7 @@ h2 {
     border-radius: 10px; /* Bordes redondeados */
     overflow: hidden; /* Para que los bordes redondeados se apliquen a todo el contenido */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más grande */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
 }
 
 .form-inline .form-control {
@@ -102,4 +107,16 @@ h2 {
     font-size: 18px; /* Tamaño de la letra */
     font-weight: bold; /* Letra en negrita */
     padding: 15px; /* Espaciado interno */
+}
+
+/* Estilo para centrar el texto en la columna "Acciones" */
+.actions-column {
+    text-align: center;
+}
+
+/* Estilo para mensajes de error */
+.error-message {
+    color: #dc3545;
+    font-weight: bold;
+    margin-top: 10px;
 }
