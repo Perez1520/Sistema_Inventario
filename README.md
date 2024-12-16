@@ -50,6 +50,9 @@ Este es un sistema de inventario simple para gestionar productos utilizando Node
 
 El archivo [styles.css](http://_vscodecontentref_/2) contiene los estilos personalizados para la aplicación, incluyendo estilos para botones, tablas y formularios.
 
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
 ## Contacto
 
 Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue o contactar al autor del proyecto.
