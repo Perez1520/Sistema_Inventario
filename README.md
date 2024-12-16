@@ -50,16 +50,6 @@ Este es un sistema de inventario simple para gestionar productos utilizando Node
 
 El archivo [styles.css](http://_vscodecontentref_/2) contiene los estilos personalizados para la aplicación, incluyendo estilos para botones, tablas y formularios.
 
-## Contribuir
-
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y haz commit (`git commit -am 'Añadir nueva funcionalidad'`).
-4. Sube tus cambios (`git push origin feature/nueva-funcionalidad`).
-5. Abre un Pull Request.
-
 ## Contacto
 
 Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue o contactar al autor del proyecto.
